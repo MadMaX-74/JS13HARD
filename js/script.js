@@ -1,35 +1,22 @@
-let lang = prompt ('Введите язык в формате ru - en');
-
-if (lang == 'ru'){
-    console.log ('Пн, Вт, Ср, Чт, Пт, Сб, Вс');
-}else if (lang === 'en'){
-    console.log ('Mon, Tue, Wed, Thu< Fri, Sat, Sun')
-}else{
-    console.log ('вы ввели язык в другом формате, перезагрузите страницу и попробуйте снова');
-}
-
-switch (lang){
-    case 'ru':
-        console.log ('Пн, Вт, Ср, Чт, Пт, Сб, Вс');
-        break;
-    case 'en':
-        console.log ('Пн, Вт, Ср, Чт, Пт, Сб, Вс');
-        break;
-    default:
-        console.log ('вы ввели язык в другом формате, перезагрузите страницу и попробуйте снова');
-}
-
-
-let lang_array = [];
-lang_array['ru'] = ['Пн','Вт','СР','Чт','Пт','Сб','Вс'];
-lang_array['en'] = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
-
-console.log(lang_array[lang]);
+let s1 = '    Hello my friend, friend,friend,friend,friend,friend,friend,friend,friend,friend,friend,friend  ',
+    s2 = 20,
+    s3 = true,
+    str;
 
 
 
-let namePerson = prompt('Введите ваше имя');
 
-let person = (namePerson == 'Артем') ? 'директор' : (namePerson == 'Максим') ? 'преподаватель' : 'студент';
+function lesson4 (data){
+    if (typeof data !== 'string'){
+        console.log('data is not a string')
+    }else{
+        console.log(data.trim());
+        if (data.length > 30){
+            data.trim();
+            str = data.substr(0, 30) + '...';            
+            console.log(str);
+        }
+    }
+};
 
-console.log (person);
+lesson4(s1);
