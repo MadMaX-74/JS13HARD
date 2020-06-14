@@ -1,4 +1,5 @@
 let week = ['Пн','Вт','СР','Чт','Пт','Сб','Вс'],
+    date = new Date(),
     weekDay = getWeekDay();
    
 for (var key in week) {
@@ -13,7 +14,7 @@ for (var key in week) {
 
 
 function getWeekDay(date) {
-    date = new Date();
+    date =date || new Date();
     let days = week;
     let day = date.getDay();
 
