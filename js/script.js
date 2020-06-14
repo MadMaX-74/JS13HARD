@@ -1,23 +1,24 @@
-let week = ['Пн','Вт','СР','Чт','Пт','Сб','Вс'];
+let week = ['Пн', 'Вт', 'Сp', 'Чт',  'Пт', '<i style="font-style: italic">Сб</i>', '<i style="font-style: italic">Вс</i>'];
 
 
-function getWeekDay(date){
-    let days = week;
-  
-    return days[date.getDay()];
+function getWeekDay(){
+    let date = new Date();
+    let day = date.getDay();
+        if (day == 0) { // день недели 0 (воскресенье) в европейской нумерации будет 7 - индекс должен быть 6
+            day = 6;
+        }
+    return day;
   }
   
-let date = new Date();
-let weekDay = getWeekDay(date);
+
+let weekDay = getWeekDay();
 console.log(weekDay);    
    
-for (var key in week) {
-    if (key <5) {
+for (let key in week) {
+    if(weekDay == +key){
+        document.write('<b>'+week[key] + '</b>' + '<br>');
+    } else {
         document.write(week[key] + '<br>');
     }
-    else {
-        document.write('<i style="font-style: italic">' + week[key] + '<br>')
-    }
-}    
-
+}
 
