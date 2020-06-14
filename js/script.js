@@ -1,6 +1,6 @@
 let week = ['Пн','Вт','СР','Чт','Пт','Сб','Вс'],
     date = new Date(),
-    weekDay = getWeekDay();
+    weekDay = getWeekDay(date);
    
 for (var key in week) {
     if (key <5) {
