@@ -1,6 +1,5 @@
-let week = ['Пн','Вт','СР','Чт','Пт','Сб','Вс'],
-    date = new Date(),
-    weekDay = getWeekDay(date);
+let week = ['Пн','Вт','СР','Чт','Пт','Сб','Вс'];
+    
    
 for (var key in week) {
     if (key <5) {
@@ -12,11 +11,11 @@ for (var key in week) {
 }    
 
 
-
 function getWeekDay(date) {
-    date =date || new Date();
     let days = week;
-    let day = date.getDay();
-
-    return days[day];
-};
+  
+    return days[date.getDay()];
+  }
+  
+  let date = new Date();
+  document.write (getWeekDay(date));
